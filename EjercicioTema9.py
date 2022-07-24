@@ -29,8 +29,6 @@ class persona:
 #2. Una vez creada la clase, crea una nueva clase Cliente que herede de Persona, esta nueva clase tendrá la variable credito solo para esa clase.
 class cliente(persona):
 
-    def __init_subclass__(cls) -> None:
-        return super().__init_subclass__()
     def __init__(self, credito):
         self.credito = credito
         
@@ -44,8 +42,6 @@ class cliente(persona):
 
 class trabajador(cliente):
 
-    def __init_subclass__(cls) -> None:
-        return super().__init_subclass__()
     def __init__(self, salario):
         self.salario = salario
     def mostrarInfo(self):
