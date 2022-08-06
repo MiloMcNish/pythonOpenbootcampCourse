@@ -1,7 +1,14 @@
 import sqlite3
 
 
+
 def main():
+
+    conn = sqlite3.connect('Alumnos.db')
+    cursor = conn.cursor()
+
+    cursor.execute("CREATE TABLE Alumnos(id INT, nombre TEXT NOT NULL, apellido TEXT NOT NULL)")
+    
     ingresar_alumno(1, 'Camilo', 'McNish')
     ingresar_alumno(2, 'Arnoldo', 'Iguaran')
     ingresar_alumno(3, 'Bruno', 'Mars')
